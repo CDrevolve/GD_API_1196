@@ -20,7 +20,7 @@ class BarangFactory extends Factory
             //
             'nama' => '',
             'deskripsi' =>fake()->words(fake()->numberBetween(3,6),true),
-            'stok'=>fake()->numberBetween(5.10),
+            'stok'=>fake()->numberBetween(5,10),
         ];
     }
 }
