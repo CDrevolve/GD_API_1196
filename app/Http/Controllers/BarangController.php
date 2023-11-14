@@ -40,7 +40,7 @@ class BarangController extends Controller
             $barang = Barang::create($request->all());
             return response()->json([
                 "status" => true,
-                "message" => 'berhasil insert data',
+                "message" => 'Berhasil insert data',
                 "data" => $barang
             ], 200);
         }
@@ -117,13 +117,13 @@ class BarangController extends Controller
         try{
             $barang = Barang::find($id);
 
-            if($barang) throw new \Exception("Barang tidak ditemukan");
+            if(!$barang) throw new \Exception("Barang tidak ditemukan");
 
             $barang->delete();
 
             return response()->json([
                 "status" => true,
-                "message" => 'berhasil ambil data',
+                "message" => 'Berhasil delete data',
                 "data" => $barang
             ], 200);
         }
